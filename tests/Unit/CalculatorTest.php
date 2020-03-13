@@ -23,8 +23,8 @@ class CalculatorTest extends TestCase
     public function testDividTwoNumber()
     {
         $calculators = new Calculators();
-        $num1 = 15;
-        $num2 = 3;
+        $num1 = 20;
+        $num2 = 4;
         $this->assertEquals(5, $calculators->divid($num1, $num2));
     }
 
