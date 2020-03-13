@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage("Composer install") {
+        stage("Composer check") {
             steps {
                 sh 'composer install'
             }
