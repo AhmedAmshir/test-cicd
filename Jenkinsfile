@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage("Composer check first") {
+        stage("Composer check") {
             steps {
                 sh 'curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer'
                 sh 'composer install'
