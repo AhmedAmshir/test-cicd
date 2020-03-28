@@ -1,8 +1,9 @@
 pipeline {
-    agent any
+    agent { docker { image 'php' }}
     stages {
-        stage("Composer check ") {
+        stage("Build") {
             steps {
+                sh 'php --version'
                 sh 'curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer'
                 sh 'composer install'
                 sh 'composer --version'
