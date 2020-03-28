@@ -1,7 +1,10 @@
 pipeline {
-    agent { docker { image 'php' }}
+    agent any
     stages {
         stage("Build") {
+            agent {
+                docker { image 'php' }
+            }
             steps {
                 sh 'php --version'
                 sh 'curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer'
