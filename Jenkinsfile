@@ -3,11 +3,11 @@ pipeline {
     stages {
         stage("Build") {
             agent {
-                docker { image 'php' }
-            }
+                docker { image 'fritsstegmann/jenkins-build-php' }
+            }test new imagetest new image
             steps {
                 sh 'php --version'
-                sh 'curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer'
+                sh 'composer install'
                 sh 'composer --version'
             }
         }
