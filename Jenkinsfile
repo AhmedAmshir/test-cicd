@@ -1,10 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        dockerfile true
+    }
     stages {
         stage("Build") {
-            agent {
-                docker { image 'fritsstegmann/jenkins-build-php' }
-            }
             steps {
                 sh 'php --version'
                 sh 'composer install'
