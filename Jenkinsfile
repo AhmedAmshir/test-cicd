@@ -13,7 +13,7 @@ pipeline {
         }
         stage("Unit test") {
             steps {
-                sh "./vendor/bin/phpunit  --filter=CalculatorTest"
+                sh "./vendor/bin/phpunit   --filter=CalculatorTest"
             }
         }
     }
