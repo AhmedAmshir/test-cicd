@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                sh 'php --version'
+                sh 'php -v'
                 sh 'composer install'
                 sh 'composer --version'
             }
